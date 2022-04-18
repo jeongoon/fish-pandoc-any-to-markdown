@@ -1,0 +1,30 @@
+* Fish Pandoc Any To Markdown
+  A simple fish shell script to convert any documents -- which is supported
+  by pandoc -- to markdown format.
+  I'm using this with my hakyll blog post when I need to post in another
+  system which only supports markdown.
+
+** Requirement
+
+   pandoc command line tool
+
+** Installation
+
+#+begin_src sh
+  curl -sL https://raw.githubusercontent.com/jeongoon/fish-pandoc-any-to-markdown/main/pandoc-any-to-markdown.fish -o pandoc-any-to-markdown.fish
+  # move it to where your binary apps are located.
+  # normally it is ~/.local/bin on Linux.
+  chmod u+x pandoc-any-to-markdown.fish
+#+end_src
+
+** Usage
+   *Note:* If your file must have extension like /input.org/.
+
+#+begin_src sh
+  ./pandoc-any-to-markdown.fish input.org &> output.markdown
+  #  any file supported by pandoc  ^^^^^^ 
+  #                                         ^^^^^ your output file.
+#+end_src
+
+** Related Blog Post
+   [[https://jeongoon.github.io/posts/2022-04-18-org-to-markdown.html][Org-mode to Markdown Made Easy]]
