@@ -22,8 +22,7 @@
 
 #+begin_src sh
   ./pandoc-any-to-markdown.fish input.org &> output.markdown
-  #  any file supported by pandoc  ^^^^^^ 
-  #                                         ^^^^^ your output file.
+  #                                       ^^ need to capture both stdout and stderr
 #+end_src
 
 ** Related Blog Post
