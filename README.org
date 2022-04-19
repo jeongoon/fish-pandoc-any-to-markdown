@@ -22,7 +22,7 @@
    *Note:* If your file path must contain a extension. ex) /input.org/.
 
 #+begin_src sh
-  ./pandoc-any-to-markdown.fish input.org &> output.markdown
+  ./pandoc-any-to-markdown.fish input.org > output.markdown
   #                                       ^^ need to capture both stdout and stderr
 #+end_src
 
