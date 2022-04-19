@@ -6,7 +6,7 @@
 
 ** Requirement
 
-   pandoc command line tool
+   pandoc command line tool: [[https://pandoc.org/installing.html][Official Install guide]]
 
 ** Installation
 
@@ -18,12 +18,13 @@
 #+end_src
 
 ** Usage
-   *Note:* If your file must have extension like /input.org/.
+
+   *Note:* If your file path must contain a extension. ex) /input.org/.
 
 #+begin_src sh
   ./pandoc-any-to-markdown.fish input.org &> output.markdown
   #                                       ^^ need to capture both stdout and stderr
 #+end_src
 
-** Related Blog Post
+** More Reading
    [[https://jeongoon.github.io/posts/2022-04-18-org-to-markdown.html][Org-mode to Markdown Made Easy]]
