@@ -7,7 +7,7 @@ set -l input_filepath $argv[1]
 
 if not test -f $input_file
     echo \
-"Usage: <document file path> &> <output file path>
+"Usage: <document file path> > <output file path>
         will print out converted text to stdout.
 "
     exit 1;
