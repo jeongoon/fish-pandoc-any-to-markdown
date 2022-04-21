@@ -1,0 +1,7 @@
+## 0.1.2
+
+update `Usage`
+
+## 0.1.1
+
+initial version after posting a blog

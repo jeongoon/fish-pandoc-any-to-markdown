@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # filename: pandoc-any-to-markdown.fish
 
-set -g pandoc_any_to_markdown_version 0.1.1
+set -g pandoc_any_to_markdown_version 0.1.2
 
 set -l input_filepath $argv[1]
 
