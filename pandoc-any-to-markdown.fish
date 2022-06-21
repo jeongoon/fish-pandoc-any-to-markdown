@@ -1,11 +1,11 @@
 #!/usr/bin/env fish
 # filename: pandoc-any-to-markdown.fish
 
-set -g pandoc_any_to_markdown_version 0.1.2
+set -g pandoc_any_to_markdown_version 0.1.3
 
 set -l input_filepath $argv[1]
 
-if not test -f $input_file
+if not test -f $input_filepath
     echo \
 "Usage: <document file path> > <output file path>
         will print out converted text to stdout.
@@ -23,7 +23,11 @@ set -l numof_printed -1
 # --  option which is passed to pandoc with `-f` option
 
 set -l convert_from (string split "." $input_filepath | tail -n1)
-# ^ pandoc reader relys on extension
+if string match --quiet --entire --ignore-case $convert_from "lhs"
+    # I preffered markdown with literate haskell
+    set convert_from "markdown+literate_haskell"
+end
+#  ^ pandoc reader relys on extension
 
 begin
     while read -l line
@@ -41,5 +45,5 @@ begin
         end
     end
 
-    pandoc -f $convert_from -t markdown -
-end < $argv[1]
+    pandoc -f $convert_from -t markdown --wrap=none -
+end < $input_filepath
